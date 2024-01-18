@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
     <title>IMTUE FormFlow</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
     <script src="../JS/main.js" defer></script>
 </head>
 <body>
-    <header class="header">111 jaar SIXT. 111 jaar traditie.</header>
-    <menu>
-        <ul>
-            <li><a href="href">Boekingen beheren</a></li>
-            <li><a href="href">NL | €</a></li>
-            <li><a href="href">Log in | Registreer</a></li>
-        </ul>
-    </menu>
+<header class="header">
+    111 jaar SIXT. 111 jaar traditie.
+</header>
+<menu>
+    <ul>
+        <li><a href=".">
+            Boekingen beheren</a></li>
+        <li><a href=".">
+            NL | €</a></li>
+        <li><a href=".">
+            Log in | Registreer</a></li>
+    </ul>
+</menu>
 
-    <section class="form">
-        <h1>Bestelwagen huren</h1>
-    </section>
+<section class="formContainer">
+
+    <h1>Bestelwagen huren</h1>
+    <form action="" class="form" id="form">
+        <label for="fname" class="label" id="label__fnaam" >Voornaam</label><br>
+        <input id="fname" type="text" class="input" maxlength="40" required><br>
+        <label for="lname" class="label" id="label__lnaam">Achternaam</label><br>
+        <input id="lname" type="text" class="input" maxlength="40" required><br>
+    </form>
+
+</section>
 </body>
 </html>
