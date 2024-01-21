@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -27,10 +27,119 @@
 
     <h1>Bestelwagen huren</h1>
     <form action="" class="form" id="form">
-        <label for="fname" class="label" id="label__fnaam" >Voornaam</label><br>
-        <input id="fname" type="text" class="input" maxlength="40" required><br>
-        <label for="lname" class="label" id="label__lnaam">Achternaam</label><br>
-        <input id="lname" type="text" class="input" maxlength="40" required><br>
+        <section class="input__section">
+            <div class="row items_3">
+                <div class="field__column">
+                    <label for="fname" class="label" id="label__fnaam" aria-label="Voornaam">Voornaam</label><br>
+                    <input id="fname" type="text" class="input" aria-labelledby="label__fnaam" maxlength="40" required>
+                </div>
+
+                <div class="field__column">
+                    <label for="tussenvoegsel" class="label" id="label__tussenvoegsel" aria-label="Tussenvoegsel">Tussenvoegsel</label><br>
+                    <input id="tussenvoegsel" type="text" class="input" aria-labelledby="label__tussenvoegsel"
+                           maxlength="10">
+                </div>
+
+                <div class="field__column">
+                    <label for="lname" class="label" id="label__lnaam" aria-label="Achternaam">Achternaam</label><br>
+                    <input id="lname" type="text" class="input" aria-labelledby="label__lnaam" maxlength="40" required>
+                </div>
+            </div>
+
+            <p class="label required" aria-label="Geslacht">Geslacht</p>
+            <div class="field_row gender_row">
+                <input id="gender_m" type="radio" class="input_r" value="man" name="gender">
+                <label for="gender_m" class="label__gender" id="label__man">man</label>
+                <input id="gender_f" type="radio" class="input_r" value="vrouw" name="gender">
+                <label for="gender_f" class="label__gender" id="label__vrouw">vrouw</label>
+                <input id="gender_d" type="radio" class="input_r" value="anders" name="gender">
+                <label for="gender_d" class="label__gender" id="label__anders">anders</label>
+            </div>
+
+            <div class="row items_2 adress">
+                <div class="field__column">
+                    <label for="street" class="label" id="label__street" aria-label="Straat">Straat</label><br>
+                    <input id="street" type="text" class="input street" aria-labelledby="label__street" maxlength="40"
+                           required>
+                </div>
+
+                <div class="field__column">
+                    <label for="huisnummer" class="label" id="label__huisnummer"
+                           aria-label="Huisnummer">Huisnummer</label><br>
+                    <input id="huisnummer" type="text" class="input" aria-labelledby="label__huisnummer" maxlength="10"
+                           required>
+                </div>
+            </div>
+
+            <div class="row items_2">
+                <div class="field__column">
+                    <label for="postalcode" class="label" id="label__postalcode"
+                           aria-label="Postcode">Postcode</label><br>
+                    <input id="postalcode" type="text" class="input" aria-labelledby="label__postalcode" maxlength="8"
+                           required>
+                </div>
+                <div class="field__column">
+                    <label for="place" class="label" id="label__place" aria-label="Woonplaats">Woonplaats</label><br>
+                    <input id="place" type="text" class="input plaats" aria-labelledby="label__place" maxlength="40"
+                           required>
+                </div>
+            </div>
+
+            <div class="row items_2">
+                <div class="field__column">
+                    <label for="phoneNumber" class="label" id="label__phone"
+                           aria-label="Voornaam">Telefoonnummer</label><br>
+                    <input id="phoneNumber" type="text" class="input" aria-labelledby="label__phone" maxlength="12"
+                           required>
+                </div>
+
+                <div class="field__column">
+                    <label for="email" class="label" id="label__email" aria-label="Mailadres">Mailadres</label><br>
+                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="10" required>
+                </div>
+            </div>
+
+            <div class="row items_4">
+                <div class="field__column">
+                    <p class="label required" aria-label="Extra Bestuurder">Extra Bestuurder </p>
+                    <div class="row">
+                        <div style="width: 50%">
+                            <input id="extra_yes" type="radio" class="input_r" value="ja" name="extra">
+                            <label for="extra_yes" class="label__gender" id="label__extraYes">Ja</label>
+                        </div>
+                        <div style="width: 50%">
+                            <input id="extra_no" type="radio" class="input_r" value="nee" name="extra">
+                            <label for="extra_no" class="label__gender" id="label__extraNo">Nee</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="field__column">
+                    <label for="email" class="label" id="label__email" aria-label="Mailadres">Mailadres</label><br>
+                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="10" required>
+                </div>
+
+                <div class="field__column">
+                    <label for="email" class="label" id="label__email" aria-label="Mailadres">Mailadres</label><br>
+                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="10" required>
+                </div>
+
+                <div class="field__column">
+                    <p class="label required" aria-label="Extra Bestuurder">Extra Bestuurder </p>
+                    <div class="row">
+                        <div style="width: 50%">
+                            <input id="extra_yes" type="radio" class="input_r" value="ja" name="extra">
+                            <label for="extra_yes" class="label__gender" id="label__extraYes">Ja</label>
+                        </div>
+                        <div style="width: 50%">
+                            <input id="extra_no" type="radio" class="input_r" value="nee" name="extra">
+                            <label for="extra_no" class="label__gender" id="label__extraNo">Nee</label>
+                        </div>
+                    </div>
+
+                </div>
+        </section>
     </form>
 
 </section>
