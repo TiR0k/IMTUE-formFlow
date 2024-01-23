@@ -65,19 +65,18 @@ a:after {
     width: 0;
 }
 
-a:hover:after {
+a:hover:after, a:focus:after{
     width: 100%;
     left: 0;
 }
 
-li:hover a:hover{
+li:hover, a:hover{
     cursor: pointer;
 }
 
 .formContainer{
     width: 54%;
-    /*height: 100%;*/
-    background: #FFFFFF;
+    background: rgba(255, 255, 255, 0.9);
     margin: 10px auto;
     border-radius: 20px;
     padding: 2%;
@@ -87,6 +86,10 @@ li:hover a:hover{
     content: '*';
     font-weight: 1000;
     color: red;
+}
+
+.label__radio:after{
+    content: "";
 }
 
 .row{
@@ -111,7 +114,7 @@ li:hover a:hover{
 
 .label{
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .field__column{
@@ -125,14 +128,15 @@ li:hover a:hover{
     width: 100%;
     height: 3rem;
     padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 10px;
     border: 1px solid rgba(1,1,1,0.2);
 }
 
-input:focus, textarea:focus, .input_r:focus, input:hover{
+input:focus, textarea:focus, .input_r:focus{
     border: 2px solid #FF5F00;
     outline: none;
+    accent-color: #FF5F00;
 }
 
 .input_r{
@@ -143,12 +147,23 @@ input:focus, textarea:focus, .input_r:focus, input:hover{
     margin: 5px;
 }
 
-.label__gender{
-    margin-right: 20px;
-    font-size: 16px;
+.label__radio{
+    font-size: 18px;
 }
 
-.gender_row{
+#label__tussenvoegsel:after{
+    content: '*';
+    font-weight: 1000;
+    /*color: red;*/
+    opacity: 0;
+}
+
+.label__gender{
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.gender_row, .insurance_row{
     margin-bottom: 20px;
 }
 
@@ -158,4 +173,35 @@ input:focus, textarea:focus, .input_r:focus, input:hover{
 
 #phoneNumber, #email{
     width: 100%;
+}
+
+.field__column:has(>.car_types),  .field__column:has(>.insurance_types){
+    width: 100%;
+
+}
+
+.car_types, .insurance_types{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden{
+    display: none;
+}
+
+.buttonRow{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.submit{
+    color: white;
+    background: #FF5F00;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%;
+
 }

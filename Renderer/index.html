@@ -16,7 +16,7 @@
     <ul>
         <li><a href=".">
             Boekingen beheren</a></li>
-        <li><a href=".">
+        <li><a href="." aria-label="Taal | Valuta">
             NL | €</a></li>
         <li><a href=".">
             Log in | Registreer</a></li>
@@ -46,14 +46,14 @@
                 </div>
             </div>
 
-            <p class="label required" aria-label="Geslacht">Geslacht</p>
-            <div class="field_row gender_row">
-                <input id="gender_m" type="radio" class="input_r" value="man" name="gender">
-                <label for="gender_m" class="label__gender" id="label__man">man</label>
-                <input id="gender_f" type="radio" class="input_r" value="vrouw" name="gender">
-                <label for="gender_f" class="label__gender" id="label__vrouw">vrouw</label>
-                <input id="gender_d" type="radio" class="input_r" value="anders" name="gender">
-                <label for="gender_d" class="label__gender" id="label__anders">anders</label>
+            <p class="label required" tabindex="0" aria-label="Geslacht">Geslacht</p>
+            <div class="gender_row">
+                <input id="gender_m" type="radio" class="input_r" value="man" name="gender" required>
+                <label for="gender_m" class="label__gender label__radio" id="label__man">Man</label>
+                <input id="gender_f" type="radio" class="input_r" value="vrouw" name="gender" required>
+                <label for="gender_f" class="label__gender label__radio" id="label__vrouw">Vrouw</label>
+                <input id="gender_d" type="radio" class="input_r" value="anders" name="gender" required>
+                <label for="gender_d" class="label__gender label__radio" id="label__anders">Anders</label>
             </div>
 
             <div class="row items_2 adress">
@@ -88,57 +88,203 @@
             <div class="row items_2">
                 <div class="field__column">
                     <label for="phoneNumber" class="label" id="label__phone"
-                           aria-label="Voornaam">Telefoonnummer</label><br>
+                           aria-label="Telefoonnummer">Telefoonnummer</label><br>
                     <input id="phoneNumber" type="text" class="input" aria-labelledby="label__phone" maxlength="12"
                            required>
                 </div>
 
                 <div class="field__column">
                     <label for="email" class="label" id="label__email" aria-label="Mailadres">Mailadres</label><br>
-                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="10" required>
+                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="50" required>
                 </div>
             </div>
 
-            <div class="row items_4">
+            <div class="row items_3">
                 <div class="field__column">
-                    <p class="label required" aria-label="Extra Bestuurder">Extra Bestuurder </p>
-                    <div class="row">
-                        <div style="width: 50%">
-                            <input id="extra_yes" type="radio" class="input_r" value="ja" name="extra">
-                            <label for="extra_yes" class="label__gender" id="label__extraYes">Ja</label>
-                        </div>
-                        <div style="width: 50%">
-                            <input id="extra_no" type="radio" class="input_r" value="nee" name="extra">
-                            <label for="extra_no" class="label__gender" id="label__extraNo">Nee</label>
-                        </div>
+                    <p class="label required" tabindex="0" aria-label="Extra Bestuurder">Extra Bestuurder </p>
+                    <div style="width: 50%">
+                        <input id="extra_yes" type="radio" class="input_r" value="ja" name="extra" required>
+                        <label for="extra_yes" class="label__radio" id="label__extraYes">Ja</label>
+                    </div>
+                    <div style="width: 50%">
+                        <input id="extra_no" type="radio" class="input_r" value="nee" name="extra" required>
+                        <label for="extra_no" class="label__radio" id="label__extraNo">Nee</label>
                     </div>
 
                 </div>
 
                 <div class="field__column">
-                    <label for="email" class="label" id="label__email" aria-label="Mailadres">Mailadres</label><br>
-                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="10" required>
+                    <p class="label required" tabindex="0" aria-label="Elektisch voertuig">Elektrisch</p>
+                    <div style="width: 50%">
+                        <input id="electric_yes" type="radio" class="input_r" value="ja" name="electric" required>
+                        <label for="electric_yes" class="label__radio" id="label__electricYes">Ja</label>
+                    </div>
+                    <div style="width: 50%">
+                        <input id="electric_no" type="radio" class="input_r" value="nee" name="electric" required>
+                        <label for="electric_no" class="label__radio" id="label__electricNo">Nee</label>
+                    </div>
                 </div>
 
                 <div class="field__column">
-                    <label for="email" class="label" id="label__email" aria-label="Mailadres">Mailadres</label><br>
-                    <input id="email" type="text" class="input" aria-labelledby="label__email" maxlength="10" required>
-                </div>
-
-                <div class="field__column">
-                    <p class="label required" aria-label="Extra Bestuurder">Extra Bestuurder </p>
-                    <div class="row">
-                        <div style="width: 50%">
-                            <input id="extra_yes" type="radio" class="input_r" value="ja" name="extra">
-                            <label for="extra_yes" class="label__gender" id="label__extraYes">Ja</label>
-                        </div>
-                        <div style="width: 50%">
-                            <input id="extra_no" type="radio" class="input_r" value="nee" name="extra">
-                            <label for="extra_no" class="label__gender" id="label__extraNo">Nee</label>
-                        </div>
+                    <p class="label required" tabindex="0" aria-label="Verhuisdeken bijhuren">Verhuisdeken </p>
+                    <div style="width: 50%">
+                        <input id="blanket_yes" type="radio" class="input_r" value="ja" name="blanket" required>
+                        <label for="blanket_yes" class="label__radio">Ja</label>
+                    </div>
+                    <div style="width: 50%">
+                        <input id="blanket_no" type="radio" class="input_r" value="nee" name="blanket" required>
+                        <label for="blanket_no" class="label__radio">Nee</label>
                     </div>
 
                 </div>
+            </div>
+
+            <div class="row items_2">
+                <div class="field__column">
+                    <label for="inhoud" class="label" id="label__inhoud" aria-label="Gewenste inhoud">Gewenste
+                        m<sup>2</sup></label><br>
+                    <input id="inhoud" type="number" class="input" aria-labelledby="label__inhoud" maxlength="3"
+                           min="0" required>
+                </div>
+
+                <div class="field__column">
+                    <label for="reikwijdte" class="label" id="label__reikwijdte"
+                           aria-label="Reikwijdte">Reikwijdte</label><br>
+                    <input id="reikwijdte" type="number" class="input" aria-labelledby="label__reikwijdte" min="0"
+                           maxlength="3" required>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="field__column">
+                    <p class="label required" tabindex="0" aria-label="Type voertuig">Type voertuig</p>
+                    <div class="car_types">
+                        <div>
+                            <input id="type_s" type="radio" class="input_r" value="s" name="type" required>
+                            <label for="type_s" class="label__radio" id="label__typeS">Peugeot Partner
+                                (klein) </label>
+                        </div>
+                        <div>
+                            <input id="type_m" type="radio" class="input_r" value="m" name="type" required>
+                            <label for="type_m" class="label__radio" id="label__typeM">Mercedes-Benz Sprinter
+                                (middel) </label>
+                        </div>
+                        <div>
+                            <input id="type_l" type="radio" class="input_r" value="l" name="type" required>
+                            <label for="type_l" class="label__radio" id="label__typeL">Iveco Daily
+                                (groot)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row items_2">
+                <div class="field__column">
+                    <label for="pickupDate" class="label" id="label__pickupDate"
+                           aria-label="Ophaaldatum">Ophaaldatum</label><br>
+                    <input id="pickupDate" type="date" class="input" aria-labelledby="label__pickupDate" min="" max=""
+                           maxlength="10"
+                           required>
+                </div>
+
+                <div class="field__column">
+                    <label for="returnDate" class="label" id="label__returnDate"
+                           aria-label="Inleverdatum">Inleverdatum</label><br>
+                    <input id="returnDate" type="date" class="input" aria-labelledby="label__returnDate" min="" max=""
+                           maxlength="10"
+                           required>
+                </div>
+            </div>
+
+            <div class="row insurance_row">
+                <div class="field__column">
+                    <p class="label required" tabindex="0" aria-label="Extra bescherming">Extra bescherming</p>
+                    <div class="row insurance_row">
+                        <div style="width: 50%">
+                            <input id="insurance_yes" type="radio" class="input_r" value="ja" name="insurance" required>
+                            <label for="insurance_yes" class="label__radio" id="label__insuranceYes">Ja</label>
+                        </div>
+                        <div style="width: 50%">
+                            <input id="insurance_no" type="radio" class="input_r" value="nee" name="insurance" required>
+                            <label for="insurance_no" class="label__radio" id="label__insuranceNo">Nee</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row hidden" id="insurance_row">
+                <div class="field__column">
+                    <p class="label required" tabindex="0" aria-label="Type bescherming">Type bescherming</p>
+                    <div class="insurance_types">
+                        <div>
+                            <input id="insurance_basic" type="radio" class="input_r" value="ja" name="insurance_type">
+                            <label for="insurance_basic" class="label__radio" id="label__insuranceBasic">Basic</label>
+                        </div>
+                        <div>
+                            <input id="insurance_smart" type="radio" class="input_r" value="nee" name="insurance_type">
+                            <label for="insurance_smart" class="label__radio" id="label__insuranceSmart">Smart</label>
+                        </div>
+                        <div>
+                            <input id="insurance_inclusicve" type="radio" class="input_r" value="nee" name="insurance_type">
+                            <label for="insurance_inclusicve" class="label__radio" id="label__insuranceInclusicve">Inclusive</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="field__column">
+                    <p class="label required" tabindex="0" aria-label="Rijbewijs">Rijbewijs</p>
+                    <div class="car_types">
+                        <div>
+                            <input id="license_b" type="checkbox" class="input_r checkbox" value="b" name="license"
+                                   aria-labelledby="label__licenseB" onchange=checkChange() required>
+                            <label for="license_b" class="label__radio" id="label__licenseB" aria-label="b">B</label>
+                        </div>
+                        <div>
+                            <input id="license_B+" type="checkbox" class="input_r checkbox" value="B+" name="license"
+                                   aria-labelledby="label__licenseB+" onchange=checkChange() required>
+                            <label for="license_B+" class="label__radio" id="label__licenseB+"
+                                   aria-label="B+">B+</label>
+                        </div>
+                        <div>
+                            <input id="license_BR" type="checkbox" class="input_r checkbox" value="BE" name="license"
+                                   aria-labelledby="label__licenseBE" onchange=checkChange() required>
+                            <label for="license_BR" class="label__radio" id="label__licenseBE"
+                                   aria-label="B E">BE</label>
+                        </div>
+                        <div>
+                            <input id="license_C" type="checkbox" class="input_r checkbox" value="C" name="license"
+                                   aria-labelledby="label__licenseC" onchange=checkChange() required>
+                            <label for="license_C" class="label__radio" id="label__licenseC" aria-label="c">C</label>
+                        </div>
+                        <div>
+                            <input id="license_CE" type="checkbox" class="input_r checkbox" value="CE" name="license"
+                                   aria-labelledby="label__licenseCE" onchange=checkChange() required>
+                            <label for="license_CE" class="label__radio" id="label__licenseCE"
+                                   aria-label="C E">CE</label>
+                        </div>
+                        <div>
+                            <input id="license_C1" type="checkbox" class="input_r checkbox" value="C1" name="license"
+                                   aria-labelledby="label__licenseC1" onchange=checkChange() required>
+                            <label for="license_C1" class="label__radio" id="label__licenseC1"
+                                   aria-label="C1">C1</label>
+                        </div>
+                        <div>
+                            <input id="license_CE1" type="checkbox" class="input_r checkbox" value="C1E" name="license"
+                                   aria-labelledby="label__licenseC1E" onchange=checkChange() required>
+                            <label for="license_CE1" class="label__radio" id="label__licenseC1E"
+                                   aria-label="C1E">C1E</label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="buttonRow">
+                <button type="submit" class="submit">Bestel</button>
+            </div>
+
         </section>
     </form>
 
